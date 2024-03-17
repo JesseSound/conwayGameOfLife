@@ -10,8 +10,7 @@ public class TileGrid : MonoBehaviour
     //I want the sim to be slower okAYYY
     public float delayBetweenIterations = 0.1f;
     private float timer = 0f;
-    public Gradient colGrad;
-
+    
     int[,] types =
     {
         { 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0,1 },
@@ -125,9 +124,10 @@ public class TileGrid : MonoBehaviour
 
                     // Calculate the distance between the cell and the center of the screen
                     float distanceToCenter = Vector2.Distance(screenCenter, cellPosition);
-
-                    // Map the distance to a color using the gradient
-                    Color color = types[row, col] == 1 ? colGrad.Evaluate(distanceToCenter) : Color.black;
+                    // Normalize the distance between 0 and 1
+                    float normalizedDistance = Mathf.Clamp01(distanceToCenter / rows);
+                    // Map the distance to a color using the gradient. Red is center, green is Outer.
+                    Color color = types[row, col] == 1 ? Color.Lerp(Color.red, Color.green, normalizedDistance) : Color.black;
 
                     // Apply the color to the tile
                     tiles[row][col].GetComponent<SpriteRenderer>().color = color;
