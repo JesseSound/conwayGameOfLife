@@ -75,7 +75,7 @@ public class TileGrid : MonoBehaviour
                 GameObject tile = Instantiate(tilePrefab);
                 tile.transform.position = new Vector3(x, y);
                 columnTiles.Add(tile);
-                types[row, col] = Random.Range(0, 2);
+                types[row, col] = Random.Range(0, 2); //randomly assign a typing to each cell. the reason we set the second number to 2 is because it is EXCLUDED, it will never pick 2. if it was 1, it would never pick 1.
 
                 x += 1.0f;
             }
