@@ -133,7 +133,7 @@ public class TileGrid : MonoBehaviour
                     }
 
                     // Apply the rules of the game
-                    if (types[row, col] == 1 && (aliveNeighbours < 2 || aliveNeighbours > 3))
+                    if (types[row, col] == 1 && (aliveNeighbours !=2 && aliveNeighbours != 3))
                     {
                         // Cell dies due to underpopulation or social anxiety
                         nextGeneration[row, col] = 0;
@@ -143,10 +143,10 @@ public class TileGrid : MonoBehaviour
                         // Cell is born due to other cells bangin'
                         nextGeneration[row, col] = 1;
                     }
-                    else
+                    else if(types[row, col] == 1 && (aliveNeighbours == 2 || aliveNeighbours == 3))
                     {
-                        // Cell remains the same
-                        nextGeneration[row, col] = types[row, col];
+                        // Cell remains the same / lives on
+                        nextGeneration[row, col] = 1;
                     }
                 }
             }
