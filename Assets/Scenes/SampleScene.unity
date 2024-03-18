@@ -176,7 +176,7 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.03
     y: 0
     width: 1
     height: 1
@@ -184,7 +184,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 22
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -209,7 +209,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.7, y: 5.02, z: -10}
+  m_LocalPosition: {x: 42.9, y: 22.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -246,36 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 2740823873983857981, guid: 02cc19f11d4fec24fa91979d17423381, type: 3}
   delayBetweenIterations: 0.1
-  colGrad:
-    serializedVersion: 2
-    key0: {r: 0, g: 0.9898858, b: 1, a: 1}
-    key1: {r: 0.9043031, g: 0.972549, b: 0.06666666, a: 1}
-    key2: {r: 0.11603131, g: 0.9622642, b: 0.07625483, a: 1}
-    key3: {r: 0, g: 0, b: 0, a: 1}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 32382
-    ctime2: 55512
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 24094
-    atime2: 39321
-    atime3: 49730
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: -1
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 4
+  spacePress: 0
 --- !u!4 &582811233
 Transform:
   m_ObjectHideFlags: 0
