@@ -117,7 +117,7 @@ public class TileGrid : MonoBehaviour
                         for (int j = -1; j <= 1; j++)
                         {
                             if (i == 0 && j == 0)
-                                continue;
+                                continue; // dont add the current cell to the neighbour count!
 
                             int neighborRow = row + i;
                             int neighborCol = col + j;
