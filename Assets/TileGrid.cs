@@ -161,7 +161,7 @@ public class TileGrid : MonoBehaviour
                 {
 
                     // Calculate the position of the current cell
-                    Vector2 cellPosition = new Vector2(col + 0.5f, rows - row - 0.5f); // Adjust as needed based on your grid setup
+                    Vector2 cellPosition = new Vector2(col , row); 
 
                     // Calculate the distance between the cell and the center of the screen
                     float distanceToCenter = Vector2.Distance(screenCenter, cellPosition);
